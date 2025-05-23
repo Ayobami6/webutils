@@ -257,7 +257,8 @@ func HandleInternalServerError(message string) gin.HandlerFunc {
 
 func HandleError(err error) {
 	if err != nil {
-		log.Fatal(err)
+		// log error
+		log.Println(err)
 	}
 }
 
