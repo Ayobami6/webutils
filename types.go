@@ -9,8 +9,8 @@ import (
 
 // CacheService interface defines two methods: Set and Get.
 type CacheService interface {
-	Set(ctx context.Context, email string, code int, expiration time.Duration) error
-	Get(ctx context.Context, email string) (int, error)
+	Set(ctx context.Context, key string, value int, expiration time.Duration) error
+	Get(ctx context.Context, key string) (string, error)
 }
 
 // Malier interface defines two methods: GenerateCode and GenerateReferenceCode.
