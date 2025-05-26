@@ -203,6 +203,7 @@ func (s *MailerService) SendMail(ctx context.Context, to, from, subject, usernam
 
 	// Create a new SMTP dialer
 	d := gomail.NewDialer(smtpHost, smtpPort, smtpUser, smtpPass)
+	d.SSL = true
 
 	// Send the email and handle errors
 	if err := d.DialAndSend(m); err != nil {
