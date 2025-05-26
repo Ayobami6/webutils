@@ -9,7 +9,7 @@ import (
 
 // CacheService interface defines two methods: Set and Get.
 type CacheService interface {
-	Set(ctx context.Context, key string, value int, expiration time.Duration) error
+	Set(ctx context.Context, key string, value string, expiration time.Duration) error
 	Get(ctx context.Context, key string) (string, error)
 }
 
