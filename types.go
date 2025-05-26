@@ -15,7 +15,7 @@ type CacheService interface {
 
 // Malier interface defines two methods: GenerateCode and GenerateReferenceCode.
 type Mailer interface {
-	SendMail(ctx context.Context, to, from, subject, userName, message, templateName string) error
+	SendMail(ctx context.Context, to, from, subject, userName, message, templateName string, mailCred MailerCredentials) error
 }
 
 // CodeGenerator is an interface for generating codes and reference codes
