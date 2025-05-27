@@ -332,7 +332,7 @@ func ToBytes(v any) ([]byte, error) {
 	return b, nil
 }
 
-func JsonDecoder(v *any, reader *io.Reader) error {
+func JsonDecoder(v any, reader *io.Reader) error {
 	// just decode in memory
 	err := json.NewDecoder(*reader).Decode(v)
 	if err != nil {
